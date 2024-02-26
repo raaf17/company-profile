@@ -6,8 +6,6 @@ use CodeIgniter\Controller;
 
 class Dashboard extends Controller
 {
-  protected $dashboard;
-
   public function index()
   {
     $data['title'] = "Admin Panel";

@@ -44,6 +44,102 @@
 <script src="<?= base_url(); ?>/template/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="<?= base_url(); ?>/template/js/demo/datatables-demo.js"></script>
 <script type="text/javascript" src="<?= base_url() ?>/ckeditor/ckeditor.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  const swal = $('.swal').data('swal');
+  // if (swal) {
+  //   Swal.fire({
+  //     title: "Are you sure?",
+  //     text: "You won't be able to revert this!",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Yes, delete it!"
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       Swal.fire({
+  //         title: "Deleted!",
+  //         text: "Your file has been deleted.",
+  //         icon: "success"
+  //       });
+  //     }
+  //   });
+  // }
+
+  function hapus(id_product) {
+    Swal.fire({
+      title: "Hapus?",
+      text: "Yakin Data Produk akan dihapus?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Hapus"
+    }).then((result) => {
+      $.ajax({
+        type: 'POST',
+        url: '<?php echo base_url('product/deleteProduct'); ?>',
+        data: {
+          _method: 'delete',
+          <?= csrf_token() ?>: "<?= csrf_hash() ?>",
+          id_product: id_product
+        },
+        dataType: 'json',
+        success: function(response) {
+          if (response.success) {
+            Swal.fire({
+              title: "Terhapus!",
+              text: response.success,
+              icon: "success",
+            }).then((result) => {
+              if (result.value) {
+                window.location.href = "<?= base_url('product'); ?>"
+              }
+            })
+          }
+        }
+      });
+    });
+  }
+
+  function hapus_akun(id) {
+    Swal.fire({
+      title: "Hapus?",
+      text: "Yakin Data Akun akan dihapus?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Hapus"
+    }).then((result) => {
+      $.ajax({
+        type: 'POST',
+        url: '<?php echo base_url('account/deleteAccount'); ?>',
+        data: {
+          _method: 'delete',
+          <?= csrf_token() ?>: "<?= csrf_hash() ?>",
+          id: id
+        },
+        dataType: 'json',
+        success: function(response) {
+          if (response.success) {
+            Swal.fire({
+              title: "Terhapus!",
+              text: response.success,
+              icon: "success",
+            }).then((result) => {
+              if (result.value) {
+                window.location.href = "<?= base_url('account'); ?>"
+              }
+            })
+          }
+        }
+      });
+    });
+  }
+</script>
 
 <script>
   CKEDITOR.replace('description');

@@ -5,6 +5,10 @@ $routes->group('product', ['namespace' => '\App\Modules\Product\Controllers'], f
   $subroutes->get('/', 'Product::index');
   $subroutes->get('newProduct', 'Product::newProduct');
   $subroutes->post('addProduct', 'Product::addProduct');
+  $subroutes->get('editProduct/(:num)', 'Product::editProduct/$1');
+  $subroutes->post('updateProduct/(:num)', 'Product::updateProduct/$1');
+  $subroutes->delete('deleteProduct', 'Product::deleteProduct');
+  $subroutes->get('detailProduct/(:num)', 'Product::detailProduct/$1');
 });
 
 // Route Daftar Category

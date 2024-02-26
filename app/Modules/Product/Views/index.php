@@ -38,9 +38,9 @@
                 <td><?= $product->category_slug; ?></td>
                 <td><?= date('d/m/Y H:i:s', strtotime($product->created_at)) ?></td>
                 <td width="25%" class="text-center">
-                  <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#ubahModal<?= $product->id_product; ?>"><i class="fas fa-eye"></i> Detail</button>
-                  <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#ubahModal<?= $product->id_product; ?>"><i class="fas fa-edit"></i> Edit</button>
-                  <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapusModal<?= $product->id_product; ?>"><i class="fas fa-trash"></i> Hapus</button>
+                  <a href="<?= base_url('product/detailProduct/'.$product->id_product) ?>" class="btn btn-primary btn-sm"><i class="fas fa-eye"></i> Detail</a>
+                  <a href="<?= base_url('product/editProduct/'.$product->id_product) ?>" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Edit</a>
+                  <button type="button" class="btn btn-danger btn-sm" onclick="hapus('<?= $product->id_product; ?>')"><i class="fas fa-trash"></i> Hapus</button>
                 </td>
               </tr>
             <?php endforeach; ?>
@@ -50,55 +50,3 @@
     </div>
   </div>
 </div>
-
-<!-- Modal Ubah Data Kategori -->
-<?php foreach ($product_list as $product) : ?>
-  <div class="modal fade" id="ubahModal<?= $product->id_product; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Ubah Data Kategori</b></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="<?= site_url('product/edit/' . $product->id_product) ?>" method="POST">
-            <?= csrf_field() ?>
-            <div class="mb-3">
-              <label for="product_name">Nama Produk</label>
-              <input type="text" class="form-control" name="product_name" id="product_name" value="<?= $product->product_name; ?>" required>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
-              <button type="submit" class="btn btn-primary btn-sm">Ubah</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-<?php endforeach; ?>
-
-<!-- Modal Hapus Data Kategori -->
-<?php foreach ($product_list as $product) : ?>
-  <div class="modal fade" id="hapusModal<?= $product->id_product; ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel"><b>Hapus Data Kategori</b></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="<?= site_url('product/delete/' . $product->id_product) ?>" method="POST">
-            <?= csrf_field() ?>
-            <input type="hidden" name="_method" value="DELETE">
-            <p>Yakin Data Kategori <b class="text-danger"><?= $product->product_name; ?></b> Mau dihapus?</p>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Batal</button>
-              <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-<?php endforeach; ?>

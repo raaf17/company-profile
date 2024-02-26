@@ -29,3 +29,127 @@ INFO - 2024-02-25 05:45:09 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-02-25 05:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-25 05:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-25 05:56:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 06:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:44:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:45:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:48:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-25 08:56:41 --> "mine_in" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 287.
+ 1 SYSTEMPATH\Validation\Validation.php(287): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('mine_in')
+ 2 SYSTEMPATH\Validation\Validation.php(183): CodeIgniter\Validation\Validation->processRules('image', 'image', null, [...], [...])
+ 3 SYSTEMPATH\Controller.php(149): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Modules\Product\Controllers\Product.php(49): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Product\Controllers\Product->addProduct()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Product\Controllers\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-25 08:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:58:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 08:59:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-25 09:00:43 --> Undefined property: stdClass::$category_name
+in APPPATH\Modules\Product\Views\editProduct.php on line 46.
+ 1 APPPATH\Modules\Product\Views\editProduct.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$category_name', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Views\\editProduct.php', 46)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Views\\editProduct.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1174): CodeIgniter\View\View->render('App\\Modules\\Product\\Views\\editProduct', [], true)
+ 5 APPPATH\Modules\Product\Controllers\Product.php(86): view('App\\Modules\\Product\\Views\\editProduct', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Product\Controllers\Product->editProduct('5')
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Product\Controllers\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-25 09:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:13:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:16:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-25 09:30:52 --> syntax error, unexpected token "}"
+in APPPATH\Modules\Product\Controllers\Product.php on line 113.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(291): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Controllers\\Product.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(269): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Modules\\Product\\Controllers\\Product')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Modules\\Product\\Controllers\\Product')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Modules\\Product\\Controllers\\Product', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-25 09:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:33:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-25 09:35:31 --> Undefined variable $image_name
+in APPPATH\Modules\Product\Controllers\Product.php on line 119.
+ 1 APPPATH\Modules\Product\Controllers\Product.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $image_name', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Controllers\\Product.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Product\Controllers\Product->updateProduct('5')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Product\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+CRITICAL - 2024-02-25 09:38:09 --> Undefined variable $image_name
+in APPPATH\Modules\Product\Controllers\Product.php on line 119.
+ 1 APPPATH\Modules\Product\Controllers\Product.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $image_name', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Controllers\\Product.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Product\Controllers\Product->updateProduct('5')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Product\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+CRITICAL - 2024-02-25 09:39:48 --> Undefined variable $image_name
+in APPPATH\Modules\Product\Controllers\Product.php on line 119.
+ 1 APPPATH\Modules\Product\Controllers\Product.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $image_name', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Controllers\\Product.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Product\Controllers\Product->updateProduct('5')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Product\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-25 09:39:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-25 09:40:55 --> Undefined variable $image_name
+in APPPATH\Modules\Product\Controllers\Product.php on line 119.
+ 1 APPPATH\Modules\Product\Controllers\Product.php(119): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $image_name', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Controllers\\Product.php', 119)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Product\Controllers\Product->updateProduct('5')
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Product\Controllers\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-25 09:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:41:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:45:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:46:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:46:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 09:46:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 10:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-25 10:01:24 --> unlink(C:\laragon\www\development\company-profile\writable\../public/asset_admin/img/rtyuj.jpg): No such file or directory
+in APPPATH\Modules\Product\Controllers\Product.php on line 128.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(C:\\laragon\\www\\development\\company-profile\\writable\\../public/asset_admin/img/rtyuj.jpg): No such file or directory', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Product\\Controllers\\Product.php', 128)
+ 2 APPPATH\Modules\Product\Controllers\Product.php(128): unlink('C:\\laragon\\www\\development\\company-profile\\writable\\../public/asset_admin/img/rtyuj.jpg')
+ 3 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Product\Controllers\Product->deleteProduct('2')
+ 4 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Product\Controllers\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-25 10:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 10:02:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 10:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 10:03:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 10:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 10:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 10:24:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:14:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:43:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-25 15:43:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
