@@ -2,25 +2,40 @@
 
 namespace App\Modules\Dashboard\Controllers;
 
+use App\Modules\Product\Models\CategoryModel;
+use App\Modules\Product\Models\ProductModel;
+use App\Modules\Team\Models\TeamModel;
 use CodeIgniter\Controller;
+use Myth\Auth\Models\UserModel;
 
 class Dashboard extends Controller
 {
-  public function index()
-  {
-    $data['title'] = "Admin Panel";
+  protected $product;
+  protected $category;
+  protected $user;
+  protected $team;
 
-    echo view('App\Modules\Layouts\Views\header', $data);
-    echo view('App\Modules\Dashboard\Views\index');
-    echo view('App\Modules\Layouts\Views\footer');
+  public function __construct()
+  {
+    $this->product = new ProductModel();
+    $this->category = new CategoryModel();
+    $this->user = new UserModel();
+    $this->team = new TeamModel();
   }
 
-  public function detail()
+  public function index()
   {
-    $data['title'] = "Admin Panel | Detail";
+    $data = [
+      'title' => 'Admin Panel',
+      'product_list' => $this->product->findAll(),
+      'product_count' => $this->product->countAllResults(),
+      'category_count' => $this->category->countAllResults(),
+      'user_count' => $this->user->countAllResults(),
+      'team_count' => $this->team->countAllResults()
+    ];
 
     echo view('App\Modules\Layouts\Views\header', $data);
-    echo view('App\Modules\Dashboard\Views\detail');
+    echo view('App\Modules\Dashboard\Views\index', $data);
     echo view('App\Modules\Layouts\Views\footer');
   }
 }

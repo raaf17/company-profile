@@ -1,0 +1,42 @@
+CRITICAL - 2024-02-27 00:08:50 --> Undefined variable $product_list
+in APPPATH\Modules\Dashboard\Views\index.php on line 94.
+ 1 APPPATH\Modules\Dashboard\Views\index.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $product_list', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Dashboard\\Views\\index.php', 94)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Dashboard\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1174): CodeIgniter\View\View->render('App\\Modules\\Dashboard\\Views\\index', [], true)
+ 5 APPPATH\Modules\Dashboard\Controllers\Dashboard.php(14): view('App\\Modules\\Dashboard\\Views\\index')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Dashboard\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Dashboard\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-27 00:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-27 00:24:42 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 883.
+ 1 SYSTEMPATH\Model.php(635): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(599): CodeIgniter\Model->builder()
+ 3 APPPATH\Modules\Dashboard\Controllers\Dashboard.php(33): CodeIgniter\Model->countAllResults()
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Dashboard\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Dashboard\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-27 00:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-27 00:34:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-27 00:34:40 --> Undefined variable $team_list
+in APPPATH\Modules\Beranda\Views\index.php on line 273.
+ 1 APPPATH\Modules\Beranda\Views\index.php(273): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $team_list', 'C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Beranda\\Views\\index.php', 273)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\development\\company-profile\\app\\Modules\\Beranda\\Views\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1174): CodeIgniter\View\View->render('App\\Modules\\Beranda\\Views\\index', [], true)
+ 5 APPPATH\Modules\Beranda\Controllers\Beranda.php(32): view('App\\Modules\\Beranda\\Views\\index')
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Modules\Beranda\Controllers\Beranda->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Beranda\Controllers\Beranda))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\development\\company-profile\\public\\index.php')
+INFO - 2024-02-27 00:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-27 00:37:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-27 00:40:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-27 00:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-27 00:40:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
